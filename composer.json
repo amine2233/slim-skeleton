@@ -1,19 +1,29 @@
 {
-    "name": "aminebensalah/slim4",
+    "name": "amine2233/slim-skeleton",
+    "description": "A Slim Framework skeleton application for rapid development.",
+    "keywords": [
+        "microframework",
+        "rest",
+        "router",
+        "psr7"
+    ],
+    "homepage": "http://github.com/amine2233/slim-skeleton",
+    "license": "MIT",
     "authors": [
         {
             "name": "Amine BENSALAH",
-            "email": "amine.bensalah@outlook.com"
+            "email": "amine.bensalah@outlook.com",
+            "homepage": "http://intech-consulting.fr/"
         }
     ],
     "autoload": {
         "psr-4": {
-            "App\\": "src"
+            "App\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests"
+            "Tests\\": "tests/"
         }
     },
     "require": {
