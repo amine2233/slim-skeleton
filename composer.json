@@ -29,11 +29,12 @@
     "require": {
         "php": ">=7.1",
         "ext-json": "*",
-        "php-di/php-di": "^6.0",
-        "slim/psr7": "^0.5",
-        "slim/slim": "4.0.0",
-        "monolog/monolog": "^1.25",
         "doctrine/orm": "^2.6",
+        "monolog/monolog": "^1.25",
+        "php-di/php-di": "^6.0",
+        "php-di/slim-bridge": "^3.0",
+        "slim/psr7": "^0.5",
+        "slim/slim": "^4.2",
         "vlucas/phpdotenv": "^2.5"
     },
     "require-dev": {

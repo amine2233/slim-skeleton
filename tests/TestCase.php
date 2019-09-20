@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace App\Tests;
 
+use DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
 use Exception;
 use PHPUnit\Framework\TestCase as PHPUnit_TestCase;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\App;
-use Slim\Factory\AppFactory;
 use Slim\Psr7\Factory\StreamFactory;
 use Slim\Psr7\Headers;
 use Slim\Psr7\Request as SlimRequest;
@@ -38,8 +38,7 @@ class TestCase extends PHPUnit_TestCase
         $container = $containerBuilder->build();
 
         // Instantiate the app
-        AppFactory::setContainer($container);
-        $app = AppFactory::create();
+        $app = Bridge::create($container);
 
         // Register middleware
         $middleware = require __DIR__ . '/../app/middleware.php';

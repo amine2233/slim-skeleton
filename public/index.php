@@ -4,6 +4,7 @@ use App\Application\Handlers\HttpErrorHandler;
 use App\Application\Handlers\ShutdownHandler;
 use App\Application\ResponseEmitter\ResponseEmitter;
 use DI\ContainerBuilder;
+use DI\Bridge\Slim\Bridge;
 use Slim\Factory\AppFactory;
 use Slim\Factory\ServerRequestCreatorFactory;
 
@@ -27,7 +28,7 @@ $dependencies($containerBuilder);
 $container = $containerBuilder->build();
 
 AppFactory::setContainer($container);
-$app = AppFactory::create();
+$app = Bridge::create($container);
 
 // Register middleware
 $middleware = require __DIR__.'/../app/middleware.php';
