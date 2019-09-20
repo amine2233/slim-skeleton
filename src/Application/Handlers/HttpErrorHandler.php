@@ -47,13 +47,13 @@ class HttpErrorHandler extends SlimErrorHandler
                 $error->setType(ActionError::NOT_IMPLEMENTED);
             }
         }
-        if (
-            !($exception instanceof HttpException)
+
+        if (!($exception instanceof HttpException)
             && ($exception instanceof Exception || $exception instanceof Throwable)
-            && $this->displayErrorDetails
-        ) {
+            && $this->displayErrorDetails) {
             $error->setDescription($exception->getMessage());
         }
+
         $payload = new ActionPayload($statusCode, null, $error);
         $encodedPayload = json_encode($payload, JSON_PRETTY_PRINT);
         $response = $this->responseFactory->createResponse($statusCode);
