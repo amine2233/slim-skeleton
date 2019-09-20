@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/amine2233/slim-skeleton.svg?branch=master)](https://travis-ci.com/amine2233/slim-skeleton)
+
 # Slim Framework 4 Skeleton Application
 
 Use this skeleton application to quickly setup and start working on a new Slim Framework 4 application. This application uses the latest Slim 4 with Slim PSR-7 implementation and PHP-DI container implementation and Doctrine ORM implementation. It also uses the Monolog logger.
